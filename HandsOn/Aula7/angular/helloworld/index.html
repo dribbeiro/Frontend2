@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>AngularJS Hello World</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+	<div ng-controller="controllerName">
+		<input type="text" ng-model="nome" placeholder="Digite seu nome" />
+		<h1>Hello {{nome}}</h1>
+	</div>
+	<hr />
+	<div ng-controller="segundaCtrl">
+		<input type="text" ng-model="user.name" />
+		<h1>Hello {{user.name}}</h1>
+	</div>
+	<hr />
+	<div ng-controller="contadorCtrl">
+		<a href="#" ng-click="addOne()">Add +1</a>
+		<p>Contador: {{contador}}</p>
+	</div>
+
+</body>
+</html>
