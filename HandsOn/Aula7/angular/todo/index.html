@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>AngularJS Hello World</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<style>
+		.done-true{
+			text-decoration: line-through;
+			color: gray;
+		}
+	</style>
+
+</head>
+<body ng-controller="ToDoCtrl">
+	<h2>Total de Tarefas: {{getTodoTotal()}}</h2>
+	<input type="text" ng-model="newTodo" />
+	<button class="btn btn-xs btn-success" ng-click="addOne()">Add</button>
+	<button class="btn btn-xs btn-danger" ng-click="limpar()">Limpar Concluidos</button>
+	<ul class="list-unstyled">
+		<li ng-repeat="todo in todos">
+			<input type="checkbox" ng-model="todo.done" />
+			<span class="done-{{todo.done}}">{{todo.texto}}</span>
+		</li>
+	</ul>
+</body>
+</html>
